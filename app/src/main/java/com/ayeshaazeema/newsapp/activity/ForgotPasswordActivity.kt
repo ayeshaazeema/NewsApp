@@ -1,12 +1,12 @@
-package com.ayeshaazeema.newsapp
+package com.ayeshaazeema.newsapp.activity
 
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.ayeshaazeema.newsapp.R
 import kotlinx.android.synthetic.main.activity_forgot_password.*
-import kotlinx.android.synthetic.main.activity_sign_in.*
 
 class ForgotPasswordActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -28,7 +28,11 @@ class ForgotPasswordActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View) {
         when (v.id) {
-            R.id.ib_back_forgot -> startActivity(SignInActivity.getLaunchService(this))
+            R.id.ib_back_forgot -> startActivity(
+                SignInActivity.getLaunchService(
+                    this
+                )
+            )
         }
     }
 }

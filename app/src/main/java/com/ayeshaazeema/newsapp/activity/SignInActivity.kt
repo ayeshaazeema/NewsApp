@@ -1,4 +1,4 @@
-package com.ayeshaazeema.newsapp
+package com.ayeshaazeema.newsapp.activity
 
 import android.app.ProgressDialog
 import android.content.Context
@@ -7,11 +7,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.ayeshaazeema.newsapp.R
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_sign_in.*
-import kotlinx.android.synthetic.main.activity_sign_up.*
 
 class SignInActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -41,7 +41,11 @@ class SignInActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View) {
         when (v.id) {
             R.id.tv_forgot -> startActivity(ForgotPasswordActivity.getLaunchService(this))
-            R.id.tv_register_login -> startActivity(SignUpActivity.getLaunchService(this))
+            R.id.tv_register_login -> startActivity(
+                SignUpActivity.getLaunchService(
+                    this
+                )
+            )
             R.id.btn_signin -> loginEmailPass()
         }
     }
@@ -72,7 +76,9 @@ class SignInActivity : AppCompatActivity(), View.OnClickListener {
                     startActivity(MainActivity.getLaunchService(this))
                 }
             }.addOnFailureListener {
-                val progress = ProgressDialog(this, R.style.Theme_AppCompat_Light_Dialog)
+                val progress = ProgressDialog(this,
+                    R.style.Theme_AppCompat_Light_Dialog
+                )
                 progress.hide()
                 finish()
             }

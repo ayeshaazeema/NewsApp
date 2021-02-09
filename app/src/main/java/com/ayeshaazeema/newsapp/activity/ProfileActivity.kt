@@ -1,10 +1,11 @@
-package com.ayeshaazeema.newsapp
+package com.ayeshaazeema.newsapp.activity
 
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.ayeshaazeema.newsapp.R
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_profile.*
 
@@ -32,7 +33,11 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun logOut() {
-        startActivity(Intent(SignInActivity.getLaunchService(this)))
+        startActivity(Intent(
+            SignInActivity.getLaunchService(
+                this
+            )
+        ))
         FirebaseAuth.getInstance().signOut()
     }
 

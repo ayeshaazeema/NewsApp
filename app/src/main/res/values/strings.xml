@@ -20,4 +20,8 @@
     <string name="register">Register</string>
     <string name="login">Login</string>
     <string name="login_register_question">Already have an account?</string>
+    <string name="error_text">Not empty</string>
+    <string name="error_pass">Password Mismatch</string>
+    <string name="text_user">Users</string>
+    <string name="error_register">Register Failed</string>
 </resources>
