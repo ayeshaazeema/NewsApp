@@ -1,13 +1,10 @@
 <resources>
     <string name="app_name">News App</string>
     <string name="imageview">ImageView</string>
-    <string name="text_login">Login</string>
     <string name="text_login_ins">Please sign in to continue</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
-    <string name="text_login_button">LOGIN</string>
     <string name="forgot_password">Forgot Password?</string>
-    <string name="sign_up">Sign Up</string>
     <string name="text_qa_account">Don\'t have an account?</string>
     <string name="imagebutton">ImageButton</string>
     <string name="text_forget">Forget Password</string>
@@ -16,9 +13,8 @@
     <string name="text_create_ins">Please fill in the input below here</string>
     <string name="fullname">Full Name</string>
     <string name="confirm_password">Confirm Password</string>
-    <string name="sign_in">Sign In</string>
     <string name="register">Register</string>
-    <string name="login">Login</string>
+    <string name="log_in">Log In</string>
     <string name="login_register_question">Already have an account?</string>
     <string name="error_text">Not empty</string>
     <string name="error_pass">Password Mismatch</string>
@@ -34,4 +30,8 @@
     <string name="magazine">Magazine</string>
     <string name="business">Business</string>
     <string name="title_item">Indonesia braces for more weather disasters. Climate crisis...</string>
+    <string name="dummy_date">15/02/2021</string>
+    <string name="dummy_duration">10 Min Read</string>
+    <string name="floatingactionbutton">FloatingActionButton</string>
+    <string name="log_out">Log Out</string>
 </resources>

@@ -1,14 +1,23 @@
 package com.ayeshaazeema.newsapp.activity
 
+import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.ayeshaazeema.newsapp.NewsAdapter
 import com.ayeshaazeema.newsapp.R
+import com.ayeshaazeema.newsapp.model.ResponseNews
+import com.ayeshaazeema.newsapp.service.RetrofitConfig
 import kotlinx.android.synthetic.main.activity_main.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.text.SimpleDateFormat
-import java.time.LocalDateTime
 import java.util.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -42,6 +51,44 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         ib_profile_main.setOnClickListener(this)
         tv_date_main.text = date.toString("dd/MM/yyyy")
+        getNews()
+    }
+
+    private fun getNews() {
+        val country = "id"
+        val apiKey = "464f2ccd81db443f9d0c492e9dc0a64d"
+
+        val loading = ProgressDialog.show(this, "Request Data", "Loading...")
+        RetrofitConfig.getInstance().getNewsData(country, apiKey).enqueue(
+            object : Callback<ResponseNews> {
+
+                override fun onResponse(
+                    call: Call<ResponseNews>,
+                    response: Response<ResponseNews>
+                ) {
+                    Log.d("Response", "Success" + response.body()?.articles)
+                    loading.dismiss()
+                    if (response.isSuccessful) {
+                        val status = response.body()?.status
+                        if (status.equals("ok")) {
+                            Toast.makeText(this@MainActivity, "Data Success!", Toast.LENGTH_SHORT).show()
+                            val newsData = response.body()?.articles
+                            val newsAdapter = NewsAdapter(this@MainActivity, newsData)
+
+                            rv_main.adapter = newsAdapter
+                            rv_main.layoutManager = LinearLayoutManager(this@MainActivity)
+                        } else {
+                            Toast.makeText(this@MainActivity, "Data Failed!", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                }
+
+                override fun onFailure(call: Call<ResponseNews>, t: Throwable) {
+                    Log.d("Response", "Failed :" + t.localizedMessage)
+                    loading.dismiss()
+                }
+            }
+        )
     }
 
     override fun onClick(v: View) {
