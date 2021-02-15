@@ -2,8 +2,6 @@ package com.ayeshaazeema.newsapp.model
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
-import kotlinx.android.parcel.RawValue
-import java.io.Serializable
 
 @Parcelize
 data class ResponseNews(

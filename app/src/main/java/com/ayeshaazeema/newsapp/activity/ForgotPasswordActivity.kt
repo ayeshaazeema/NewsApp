@@ -10,7 +10,6 @@ import android.widget.Toast
 import com.ayeshaazeema.newsapp.R
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_forgot_password.*
-import org.w3c.dom.Text
 
 class ForgotPasswordActivity : AppCompatActivity(), View.OnClickListener {
 
