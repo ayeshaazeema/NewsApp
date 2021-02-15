@@ -24,4 +24,14 @@
     <string name="error_pass">Password Mismatch</string>
     <string name="text_user">Users</string>
     <string name="error_register">Register Failed</string>
+    <string name="breaking_news">Breaking News</string>
+    <string name="date">9 Feb, 2021</string>
+    <string name="highlight">Contact Lost With Sriwijaya Air Boeing 737-500 After Take Off</string>
+    <string name="nathania_slavi">Nathania Slavi</string>
+    <string name="all">All</string>
+    <string name="international">International</string>
+    <string name="media">Media</string>
+    <string name="magazine">Magazine</string>
+    <string name="business">Business</string>
+    <string name="title_item">Indonesia braces for more weather disasters. Climate crisis...</string>
 </resources>
