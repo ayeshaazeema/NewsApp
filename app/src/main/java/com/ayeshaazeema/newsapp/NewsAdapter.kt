@@ -17,14 +17,9 @@ class NewsAdapter(var context: Context, var listNews: List<ArticlesItem?>?) :
         fun bind(news: ArticlesItem) {
             with(itemView) {
                 tv_title_item.text = news.title
+                tv_date_item.text = news.publishedAt
                 tv_author_item.text = news.author
                 Glide.with(context).load(news.urlToImage).centerCrop().into(iv_item_news)
-            }
-        }
-
-        fun bind(news: MainActivity) {
-            with(itemView) {
-                tv_date_item.text = news.date.toString()
             }
         }
     }
