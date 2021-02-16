@@ -34,4 +34,12 @@
     <string name="dummy_duration">10 Min Read</string>
     <string name="floatingactionbutton">FloatingActionButton</string>
     <string name="log_out">Log Out</string>
+    <string name="content">A search is underway after suspected debris from an Indonesian Sriwijaya Air flight was found hours after the plane went missing. The plane lost contact after taking off from Indonesian capital Jakarta on Saturday en route to the city of Pontianak in West Kalimantan province. The Boeing 737-500 flight was carrying 62 people. The 50 passengers included seven children and three babies.</string>
+    <string name="delivia_cibrent">Delivia Cibrent</string>
+    <string name="deliviacib_email_com">deliviacib@email.com</string>
+    <string name="preferences">Preferences</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="notifications">Notifications</string>
+    <string name="account">Account</string>
+    <string name="edit_account">Edit Account</string>
 </resources>
