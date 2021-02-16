@@ -23,12 +23,12 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
 
         supportActionBar?.hide()
 
-        btn_logout.setOnClickListener(this)
+        tv_log_out.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
         when (v.id) {
-            R.id.btn_logout -> logOut()
+            R.id.tv_log_out -> logOut()
         }
     }
 
