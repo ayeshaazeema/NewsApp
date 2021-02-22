@@ -27,7 +27,7 @@
             android:layout_height="match_parent"
             android:contentDescription="@string/imageview"
             android:scaleType="centerCrop"
-            android:src="@drawable/main_banner" />
+            android:src="@drawable/ic_image" />
 
     </androidx.cardview.widget.CardView>
 
